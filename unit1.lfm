@@ -1,0 +1,353 @@
+object Form1: TForm1
+  Left = 599
+  Height = 940
+  Top = 128
+  Width = 1553
+  Caption = 'PVPC - PHP Vulnerable Path Checker'
+  ClientHeight = 940
+  ClientWidth = 1553
+  DesignTimePPI = 144
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.0.6.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 40
+    Top = 0
+    Width = 1553
+    Align = alTop
+    ClientHeight = 40
+    ClientWidth = 1553
+    TabOrder = 0
+    object Button5: TButton
+      Left = 112
+      Height = 38
+      Top = 1
+      Width = 128
+      Caption = 'Open project'
+      Color = clSkyBlue
+      OnClick = Button5Click
+      TabOrder = 0
+    end
+    object Button10: TButton
+      Left = 240
+      Height = 38
+      Top = 0
+      Width = 121
+      Caption = 'Save Project'
+      OnClick = Button10Click
+      TabOrder = 1
+    end
+    object Button11: TButton
+      Left = 0
+      Height = 38
+      Top = 0
+      Width = 113
+      Caption = 'New Project'
+      OnClick = Button11Click
+      TabOrder = 2
+    end
+    object Button1: TButton
+      Left = 408
+      Height = 38
+      Top = 1
+      Width = 113
+      Caption = 'Quick load'
+      OnClick = Button1Click
+      TabOrder = 3
+    end
+    object Button6: TButton
+      Left = 1392
+      Height = 38
+      Top = 0
+      Width = 161
+      Caption = 'Delete debug.txt'
+      OnClick = Button6Click
+      TabOrder = 4
+    end
+  end
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 900
+    Top = 40
+    Width = 1553
+    ActivePage = TabSheet6
+    Align = alClient
+    TabIndex = 2
+    TabOrder = 1
+    object TabSheet4: TTabSheet
+      Caption = 'Files'
+      ClientHeight = 862
+      ClientWidth = 1545
+      object ListBox8: TListBox
+        Left = 8
+        Height = 760
+        Top = 96
+        Width = 702
+        ItemHeight = 0
+        MultiSelect = True
+        OnClick = ListBox8Click
+        TabOrder = 0
+      end
+      object Button8: TButton
+        Left = 0
+        Height = 38
+        Top = 16
+        Width = 113
+        Caption = 'Add files'
+        OnClick = Button8Click
+        TabOrder = 1
+      end
+      object Button9: TButton
+        Left = 128
+        Height = 38
+        Top = 16
+        Width = 192
+        Caption = 'Remove selected files'
+        OnClick = Button9Click
+        TabOrder = 2
+      end
+      object Label6: TLabel
+        Left = 8
+        Height = 25
+        Top = 69
+        Width = 53
+        Caption = 'File list'
+        ParentColor = False
+      end
+      object Label1: TLabel
+        Left = 752
+        Height = 25
+        Top = 64
+        Width = 23
+        Caption = 'ast'
+        ParentColor = False
+      end
+      object Memo1: TMemo
+        Left = 752
+        Height = 760
+        Top = 96
+        Width = 785
+        ScrollBars = ssAutoBoth
+        TabOrder = 3
+      end
+    end
+    object TabSheet5: TTabSheet
+      Caption = 'Call Graph'
+      ClientHeight = 862
+      ClientWidth = 1545
+      object PaintBox1: TPaintBox
+        Left = 768
+        Height = 678
+        Top = 56
+        Width = 750
+      end
+      object StringGrid2: TStringGrid
+        Left = 32
+        Height = 678
+        Top = 56
+        Width = 683
+        FixedCols = 0
+        Options = [goFixedVertLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goColMoving, goSmoothScroll]
+        TabOrder = 0
+      end
+      object Label4: TLabel
+        Left = 32
+        Height = 25
+        Top = 24
+        Width = 111
+        Caption = 'Adjecency List'
+        ParentColor = False
+      end
+      object Label5: TLabel
+        Left = 768
+        Height = 25
+        Top = 24
+        Width = 81
+        Caption = 'Call Graph'
+        ParentColor = False
+      end
+      object Button13: TButton
+        Left = 32
+        Height = 38
+        Top = 752
+        Width = 200
+        Caption = 'Determine Call Graph'
+        OnClick = Button13Click
+        TabOrder = 1
+      end
+      object ListBox9: TListBox
+        Left = 728
+        Height = 488
+        Top = 56
+        Width = 354
+        ItemHeight = 0
+        TabOrder = 2
+      end
+      object Button14: TButton
+        Left = 256
+        Height = 38
+        Top = 752
+        Width = 113
+        Caption = 'Button14'
+        TabOrder = 3
+      end
+      object ListBox1: TListBox
+        Left = 1142
+        Height = 480
+        Top = 55
+        Width = 366
+        ItemHeight = 0
+        TabOrder = 4
+      end
+    end
+    object TabSheet6: TTabSheet
+      Caption = 'Tests'
+      ClientHeight = 862
+      ClientWidth = 1545
+      object StringGrid1: TStringGrid
+        Left = 24
+        Height = 398
+        Top = 72
+        Width = 548
+        RowCount = 2
+        TabOrder = 0
+      end
+      object Button2: TButton
+        Left = 152
+        Height = 38
+        Top = 16
+        Width = 113
+        Caption = 'Set test'
+        OnClick = Button2Click
+        TabOrder = 1
+      end
+      object Button3: TButton
+        Left = 984
+        Height = 38
+        Top = 15
+        Width = 113
+        Caption = 'Execute test'
+        OnClick = Button3Click
+        TabOrder = 2
+        Visible = False
+      end
+      object ListBox2: TListBox
+        Left = 672
+        Height = 416
+        Top = 72
+        Width = 510
+        ItemHeight = 0
+        TabOrder = 3
+      end
+      object Button4: TButton
+        Left = 280
+        Height = 38
+        Top = 15
+        Width = 177
+        Caption = 'Find simple paths'
+        OnClick = Button4Click
+        TabOrder = 4
+      end
+      object Button16: TButton
+        Left = 24
+        Height = 38
+        Top = 16
+        Width = 113
+        Caption = 'Merge CFG''s'
+        OnClick = Button16Click
+        TabOrder = 5
+      end
+      object Button17: TButton
+        Left = 472
+        Height = 38
+        Top = 16
+        Width = 249
+        Caption = 'Find paths with max passes'
+        OnClick = Button17Click
+        TabOrder = 6
+      end
+      object SpinEdit1: TSpinEdit
+        Left = 729
+        Height = 33
+        Top = 20
+        Width = 107
+        MinValue = 1
+        TabOrder = 7
+        Value = 1
+      end
+      object Button7: TButton
+        Left = 849
+        Height = 38
+        Top = 16
+        Width = 113
+        Caption = 'Execute test'
+        OnClick = Button7Click
+        TabOrder = 8
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'Test results'
+      ClientHeight = 862
+      ClientWidth = 1545
+      object Button12: TButton
+        Left = 992
+        Height = 38
+        Top = 56
+        Width = 81
+        Caption = 'create CFG'
+        TabOrder = 0
+      end
+      object Label2: TLabel
+        Left = 142
+        Height = 25
+        Top = 47
+        Width = 161
+        Caption = 'for testing purposes'
+        ParentColor = False
+      end
+      object Memo2: TMemo
+        Left = 184
+        Height = 453
+        Top = 139
+        Width = 840
+        Lines.Strings = (
+          'Memo2'
+        )
+        TabOrder = 1
+      end
+      object Button15: TButton
+        Left = 144
+        Height = 38
+        Top = 80
+        Width = 264
+        Caption = 'Load Project (create cfg''s)'
+        TabOrder = 2
+      end
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '.php'
+    Filter = 'php-files|*.php|all files|*.*'
+    Options = [ofAllowMultiSelect, ofEnableSizing, ofViewDetail]
+    left = 888
+    top = 16
+  end
+  object OpenDialog2: TOpenDialog
+    DefaultExt = '.pcv'
+    Filter = 'pvc-files|*.pvc|all files|*.*'
+    left = 600
+    top = 176
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.*.pvc'
+    Filter = 'pvc-files|.pvc|all files|*.*'
+    left = 792
+    top = 16
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 1304
+    top = 6
+  end
+end

@@ -1,0 +1,99 @@
+object Form2: TForm2
+  Left = 738
+  Height = 773
+  Top = 425
+  Width = 1188
+  BorderStyle = bsDialog
+  Caption = 'Add new test'
+  ClientHeight = 773
+  ClientWidth = 1188
+  DesignTimePPI = 144
+  FormStyle = fsStayOnTop
+  Position = poDesktopCenter
+  LCLVersion = '2.0.6.0'
+  object ListBox10: TListBox
+    Left = 16
+    Height = 312
+    Top = 40
+    Width = 334
+    ItemHeight = 0
+    OnClick = ListBox10Click
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 25
+    Top = 8
+    Width = 165
+    Caption = 'Select Start/Entry File'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 360
+    Height = 25
+    Top = 8
+    Width = 78
+    Caption = 'Select line'
+    ParentColor = False
+  end
+  object ListBox1: TListBox
+    Left = 368
+    Height = 312
+    Top = 40
+    Width = 648
+    ItemHeight = 0
+    TabOrder = 1
+  end
+  object ListBox2: TListBox
+    Left = 368
+    Height = 360
+    Top = 392
+    Width = 648
+    ItemHeight = 0
+    TabOrder = 2
+  end
+  object Label8: TLabel
+    Left = 376
+    Height = 25
+    Top = 360
+    Width = 78
+    Caption = 'Select line'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 16
+    Height = 25
+    Top = 360
+    Width = 109
+    Caption = 'Select Exit File'
+    ParentColor = False
+  end
+  object ListBox13: TListBox
+    Left = 16
+    Height = 360
+    Top = 392
+    Width = 334
+    ItemHeight = 0
+    OnClick = ListBox13Click
+    TabOrder = 3
+  end
+  object Button1: TButton
+    Left = 1048
+    Height = 38
+    Top = 51
+    Width = 113
+    Caption = 'Add'
+    ModalResult = 1
+    OnClick = Button1Click
+    TabOrder = 4
+  end
+  object Button2: TButton
+    Left = 1048
+    Height = 38
+    Top = 104
+    Width = 113
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 5
+  end
+end
